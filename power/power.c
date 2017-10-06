@@ -477,6 +477,8 @@ struct power_module HAL_MODULE_INFO_SYM = {
     .init = power_init,
     .powerHint = power_hint,
     .setInteractive = set_interactive,
-    .setFeature = set_feature //,
-    // .getFeature = get_feature
+    .setFeature = set_feature,
+#ifdef CMEXTRAS
+    .getFeature = get_feature,
+#endif
 };
